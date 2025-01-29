@@ -16,19 +16,19 @@ const progressStyle = {
 function Checklist(props) {
     let [items, setItems] = useState([])
 
-    useEffect(() => {
-        let newArray = Array(props.children.length).fill(false);
-        for(let i in items){
-            newArray[i] =items[i]
-        }
-
-        setItems(newArray)
-    },[setItems,items])
+    // useEffect(() => {
+    //     let newArray = Array(props.children.length).fill(false);
+    //     for(let i in items){
+    //         newArray[i] =items[i]
+    //     }
+    //
+    //     setItems(newArray)
+    // },[])
 
     let listItems = [];
     for(let i in props.children){
-        let child = React.cloneElement(props.children[i],{index:i});
-        listItems[i] =child
+        let child = React.cloneElement(props.children[i],{index:i,key:i});
+        listItems[i] = child
     }
 
     return <div style={style}>
