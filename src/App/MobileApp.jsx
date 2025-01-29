@@ -4,7 +4,7 @@ import {
     Route,
 } from "react-router-dom";
 import {Index} from "../Pages/Index.tsx";
-import {MobileNavBar} from "./Nav/MobileNavBar.js";
+import {MobileNavBar} from "./Nav/MobileNavBar.jsx";
 
 function MobileApp() {
     return <Router>
