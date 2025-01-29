@@ -10,8 +10,8 @@ function MobileApp() {
     return <Router>
         <Routes>
             <Route exact path="/" element={<Index />} />
-            <Route path="/checklist" element={<Checklist />} />
-            <Route path="/streak" element={<Streak />} />
+            <Route path="/checklist" element={<ChecklistPage />} />
+            {/*<Route path="/streak" element={<StreakPage />} />*/}
         </Routes>
         <MobileNavBar/>
     </Router>
