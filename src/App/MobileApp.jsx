@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import {Index} from "../Pages/Index.tsx";
 import {MobileNavBar} from "./Nav/MobileNavBar.jsx";
+import {ChecklistPage} from "../Pages/ChecklistPage.jsx";
 
 function MobileApp() {
     return <Router>

@@ -1,4 +1,5 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
+import {ChecklistItem} from "./ChecklistItem.jsx";
 
 const style = {
     display: 'flex',
@@ -24,12 +25,18 @@ function Checklist(props) {
         setItems(newArray)
     },[setItems,items])
 
+    let listItems = [];
+    for(let i in props.children){
+        let child = React.cloneElement(props.children[i],{index:i});
+        listItems[i] =child
+    }
 
     return <div style={style}>
         <div style={headerStyle}>
             <progress id="file" value="32" max="100" style={progressStyle}> 32%</progress>
         </div>
-        {props.children}
+
+        {listItems}
     </div>
 }
 
