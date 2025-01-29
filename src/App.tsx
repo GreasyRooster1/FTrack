@@ -1,6 +1,6 @@
 import './App.css'
 import {useIsMobile} from "./hooks.ts";
-import {MobileApp} from "./App/MobileApp.tsx";
+import {MobileApp} from "./App/MobileApp.jsx";
 import {DesktopApp} from "./App/DesktopApp.tsx";
 
 function App() {
