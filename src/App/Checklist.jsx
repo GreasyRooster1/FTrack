@@ -1,15 +1,30 @@
+import {useEffect, useState} from "react";
+
+const style = {
+    display: 'flex',
+    flexDirection: 'column',
+
+}
+const headerStyle = {
+
+}
+const progressStyle = {
+
+}
+
 function Checklist(props) {
-    const style = {
-        display: 'flex',
-        flexDirection: 'column',
+    let [items, setItems] = useState([])
 
-    }
-    const headerStyle = {
+    useEffect(() => {
+        let newArray = Array(props.children.length).fill(false);
+        for(let i in items){
+            newArray[i] =items[i]
+        }
 
-    }
-    const progressStyle = {
+        setItems(newArray)
+    },[setItems,items])
 
-    }
+
     return <div style={style}>
         <div style={headerStyle}>
             <progress id="file" value="32" max="100" style={progressStyle}> 32%</progress>
