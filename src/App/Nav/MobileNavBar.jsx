@@ -1,5 +1,5 @@
 import {MobileNavIcon} from "./MobileNavIcon.jsx";
-import { ReactComponent as Icon } from './logo.svg';
+import logo from '../../assets/react.svg';
 
 function MobileNavBar() {
     const navStyle = {
@@ -11,9 +11,15 @@ function MobileNavBar() {
         width: "100vw",
     }
     return <div style={navStyle}>
-        <MobileNavIcon href="/checklist"><Icon/></MobileNavIcon>
-        <MobileNavIcon href="/home"><Icon/></MobileNavIcon>
-        <MobileNavIcon href="/streak"><Icon/></MobileNavIcon>
+        <MobileNavIcon href="/checklist">
+            <img src={logo}/>
+        </MobileNavIcon>
+        <MobileNavIcon href="/home">
+            <img src={logo}/>
+        </MobileNavIcon>
+        <MobileNavIcon href="/streak">
+            <img src={logo}/>
+        </MobileNavIcon>
     </div>
 }
 
