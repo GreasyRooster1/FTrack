@@ -1,6 +1,6 @@
 function Index() {
-    return <>
-        </>
+    return <div>
+        </div>
 }
 
 export {Index}
